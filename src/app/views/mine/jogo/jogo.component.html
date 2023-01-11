@@ -1,0 +1,44 @@
+<form [formGroup]="form" [ngStyle]="{'max-width.px' : width}">
+    <div>
+        <label for="dificuldade">Dificuldade:</label>
+        <select formControlName="dificuldade" (ngModelChange)="ngOnInit()" name="dificuldade">
+            <option *ngFor="let dificuldade of dificuldades" [ngValue]="dificuldade" >
+                {{dificuldade.nome}}
+            </option>        
+        </select>
+    </div>
+    <div>
+        <label for="dimensao">Dimensão:</label>
+        <select formControlName="dimensao" (ngModelChange)="ngOnInit()" name="dimensao">
+            <option *ngFor="let dimensao of dimensoes" [ngValue]="dimensao"  >
+                {{dimensao.nome}}
+            </option>
+        </select>
+    </div>
+</form>
+
+<div [ngStyle]="{'width.px' : width}" class="dadosJogo">
+    <div class="bandeira">{{numeroBandeiras}}</div>
+    <div (click)="ngOnInit()" [ngClass]="carinha ? 'smile' : 'sad'"></div>
+    <div>Tempo {{minutos}}:{{segundos}}</div>
+    <!--<div>Tempo: {{minutos | date:"mm"}}:{{segundos | date:"ss"}} </div>-->
+</div>
+
+<div class="tamanhoTabela">
+    <div *ngIf="ganhou" class="ganhar">
+        <div class="quadrado">
+            <div>Score: {{minutos}}:{{segundos}}</div>
+            <div (click)="ngOnInit()" class="JogarNovamente">Novo Jogo</div>
+            <a href="#" class="Scoreboard">Scoreboard</a>
+        </div>
+    </div>
+    <table>
+        <tr *ngFor="let linha of botoes; index as y">
+            <td *ngFor="let botao of linha; index as x">
+                <div (contextmenu)="colocaBandeira(x, y)" (click)="tap(x, y)" [ngClass]="{'mina': botao == ' '}" class="botao">
+                    {{botao}}
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

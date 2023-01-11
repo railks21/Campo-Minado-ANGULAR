@@ -1,0 +1,67 @@
+<!-- <form [formGroup]="registarForm" #RegisterForm="ngForm" (ngSubmit)="addData(RegisterForm.value)"> -->
+<form>
+    <div class="caixa">
+
+        <h3>Registar</h3>
+
+        <div class="primeiroNome">
+            <label>Primeiro Nome</label>
+            <input formControlName="pNome" name="pNome" id="pNome" type="text" placeholder="Primeiro Nome" autocomplete="off">
+        </div>
+
+        <div class="ultimoNome">
+            <label>Último Nome</label>
+            <input formControlName="uNome" name="uNome" id="uNome" type="text" placeholder="Último Nome" autocomplete="off">
+        </div>
+
+        <div class="username">
+            <label>Username</label>
+            <input formControlName="username" name="username" id="username" type="text" placeholder="Username" autocomplete="off">
+        </div>
+
+        <div class="email">
+            <label>Email</label>
+            <input formControlName="email" name="email" id="email" type="email" placeholder="Email" autocomplete="off">
+        </div>
+
+        <div class="senha">
+            <label>Senha</label>
+            <input formControlName="senha" name="senha" id="senha" type="password" placeholder="Senha" autocomplete="off">
+        </div>
+
+        <div class="senhaConfirmar">
+            <label>Confirmar Senha</label>
+            <input formControlName="senhaConfirmar" name="senhaConfirmar" id="senhaConfirmar" type="password" placeholder="Confirmar Senha" autocomplete="off">
+        </div>
+
+
+        <div class="registar">
+            <!-- <button [disabled]="!registarForm.valid" (click)="registar()" type="submit">Registar</button> -->
+            <button>Registar</button>
+        </div>
+    </div>
+</form>
+
+<ul>
+    <!--
+    <li *ngFor="let item of data">
+        {{ item.pNome }}
+        {{ item.uNome }}
+        {{ item.username }}
+        {{ item.email }}
+        {{ item.senha }}
+        {{ item.senhaConfirmar }}
+        <button (click)="updateData(item.id)">
+            Update
+        </button>
+        <button (click)="deleteData(item.id)">
+            Delete
+        </button>
+    </li>
+    -->
+    <li>
+        Nome Nome username email senha senhaConfirmar
+        <button>update</button>
+        <button>delete</button>
+    </li>
+</ul>

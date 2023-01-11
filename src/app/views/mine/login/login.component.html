@@ -1,0 +1,25 @@
+<!-- <form [formGroup]="loginForm" #LoginForm="ngForm"> -->
+<form>
+    <div class="caixa">
+
+        <h3>Login</h3>
+
+        <div class="username">
+            <label>Username</label>
+            <input formControlName="username" name="username" id="username" type="text" placeholder="Username" autocomplete="off">
+        </div>
+
+        <div class="senha">
+            <label>Senha</label>
+            <input formControlName="senha" name="senha" id="senha" type="password" placeholder="Senha" autocomplete="off">
+        </div>
+
+        <!--[disabled]="!loginForm.valid" no botao login-->
+
+
+        <!-- <button (click)="login()" type="submit" class="login">Login</button> -->
+
+        <button routerLink="mine/registar" type="submit" class="registar">Registar</button>
+
+    </div>
+</form>

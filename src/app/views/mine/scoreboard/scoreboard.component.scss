@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.principal {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 33%;
+    margin-top: 5vh;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+label {
+    margin: 7px;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(220, 220, 220);
+}
+
+th,
+td {
+    text-align: center;
+    padding: 5px 0;
+}
+
+th {
+    border-bottom: 2px solid black;
+}
+
+td {
+    border-bottom: 1px solid black;
+}
+
+button {
+    margin: 25px auto;
+    padding: 5px;
+    width: 50%;
+}

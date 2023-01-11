@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    background-color: rgb(180, 180, 180);
+}
+
+form>div {
+    padding: 5px 0;
+}
+
+label {
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+.dadosJogo {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.bandeira {
+    background-image: url(../icons/png/002-flag.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 25px;
+}
+
+.smile,
+.sad {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+
+.smile {
+    background-image: url(../icons/png/smile.png);
+}
+
+.sad {
+    background-image: url(../icons/png/sad.png);
+}
+
+table {
+    border-spacing: 0;
+}
+
+td {
+    position: relative;
+}
+
+.botao {
+    cursor: default;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(150, 150, 150);
+    border: 1px solid rgb(110, 110, 110);
+}
+
+.botao::after {
+    content: "";
+    cursor: pointer;
+    background-color: rgb(180, 180, 180);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-width: 4px;
+    border-style: solid;
+    border-top-color: white;
+    border-left-color: white;
+}
+
+.botao.noAfter::after {
+    content: none;
+}
+
+.botao.bandeira::after {
+    background-image: url(../icons/png/002-flag.png);
+}
+
+.botao.mina {
+    background-image: url(../icons/png/001-mine.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tamanhoTabela {
+    background-color: red;
+    position: relative;
+    width: fit-content;
+}
+
+.ganhar {
+    z-index: 1000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: grid;
+    place-items: center;
+}
+
+.quadrado {
+    width: 80%;
+    height: 150px;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    border: 3px solid white;
+}
+
+.JogarNovamente,
+.Scoreboard {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    padding: 7px;
+    border: 3px solid white;
+    border-radius: 7px;
+}

@@ -1,0 +1,47 @@
+<div class="principal">
+    <h1>ScoreBoard</h1>
+    <form>
+        <!-- <form [formGroup]="score"> -->
+        <label for="dimensao">Dimensão</label>
+        <!-- <select  formControlName="dimensao" (ngModelChange)="ngOnInit()" name="dimensao">-->
+        <select name="" id="">
+        <option>
+            <!-- <option *ngFor="let dimensao of dimensoes" [ngValue]="dimensao"> 
+            {{dimensao.nome}}-->
+            nome
+        </option>
+        </select>
+    </form>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Dificuldade</th>
+            <th>Tempo</th>
+        </tr>
+        <tr>
+            <!-- <tr *ngFor="let item of data"> -->
+            <!-- 
+        <td>{{ item.user }}</td>
+        <td>{{ item.dificuldade.nome }}</td>
+        <td>{{ item.minutos }}:{{ item.segundos }}</td>
+        -->
+            <td>user</td>
+            <td>dificuldade</td>
+            <td>minutos segundos</td>
+        </tr>
+        <tr>
+            <td>user</td>
+            <td>dificuldade</td>
+            <td>minutos segundos</td>
+        </tr>
+        <tr>
+            <td>user</td>
+            <td>dificuldade</td>
+            <td>minutos segundos</td>
+        </tr>
+    </table>
+
+
+    <button routerLink="/mine/jogo">Voltar a jogar</button>
+</div>

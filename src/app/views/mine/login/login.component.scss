@@ -1,0 +1,41 @@
+form {
+    margin: auto;
+    width: 20%;
+}
+
+.caixa {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+h3 {
+    justify-self: center;
+}
+
+.username,
+.senha {
+    position: relative;
+    margin: 4px 0;
+}
+
+input {
+    position: absolute;
+    right: 0;
+    width: 70%;
+}
+
+.login,
+.registar {
+    justify-self: center;
+    margin-top: 25px;
+}
+
+.login {
+    width: 50%;
+    padding: 10px 0;
+}
+
+.registar {
+    width: 25%;
+    padding: 6px 0;
+}

@@ -1,0 +1,50 @@
+form {
+    width: 50%;
+    margin: auto;
+}
+
+.caixa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    place-items: center;
+}
+
+.registar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+h3,
+.registar {
+    justify-self: center;
+}
+
+.primeiroNome,
+.ultimoNome,
+.username,
+.email,
+.senha,
+.senhaConfirmar {
+    position: relative;
+    margin: 8px 0;
+}
+
+label {
+    margin: 0 8px;
+}
+
+input {
+    position: absolute;
+    right: 0;
+    width: 50%
+}
+
+button {
+    padding: 8px 16px;
+    margin-top: 10px;
+}
