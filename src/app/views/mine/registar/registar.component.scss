@@ -48,3 +48,11 @@ button {
     padding: 8px 16px;
     margin-top: 10px;
 }
+
+.invalid-error {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    margin-bottom: 0px;
+    color: red;
+}

@@ -39,3 +39,11 @@ input {
     width: 25%;
     padding: 6px 0;
 }
+
+.invalid-error {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    margin-bottom: 0px;
+    color: red;
+}

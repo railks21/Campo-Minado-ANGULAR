@@ -9,6 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class JogoComponent implements OnInit {
 
+  flag: boolean = false;
 
   width:number = 0;
   tamanho: number = 0;
@@ -55,6 +56,7 @@ export class JogoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.flag = false;
 
     this.width = this.form.value.dimensao.tamanho*30;
 
@@ -270,8 +272,15 @@ export class JogoComponent implements OnInit {
         if (campoY >= 0 && campoY < this.tamanho &&
           campoX >= 0 && campoX < this.tamanho &&
           typeof (this.botoes[campoY][campoX] == 'number')) {
-
-            element.classList.add("noAfter");         
+       
+            if ((element as HTMLElement).textContent != ' 0 ') {
+              
+              if (!(element as HTMLElement).classList.contains("noAfter")) {
+                //console.log(element);
+                (element as HTMLElement).classList.add("noAfter"); 
+              }
+              
+            }
 
             if (this.botoes[campoY][campoX] == '0') {
 
@@ -285,16 +294,30 @@ export class JogoComponent implements OnInit {
               this.arrayPosicaoZeros.push([campoX, campoY]);
               this.botoes[campoY][campoX] = '00';
 
+              (element as HTMLElement).innerText = '00';
+
             }
             
         }        
   
       }
-
+      this.crash();
       this.arrayPosicaoZeros.shift();
 
     }
 
+  }
+
+  crash() {
+    setTimeout(() => {
+    const nice = document.querySelectorAll(".botao:not(.mina .noAfter)")
+    nice.forEach(element => {
+      if ((element as HTMLElement).textContent == " 00 ") {
+        (element as HTMLElement).classList.add("noAfter");
+        (element as HTMLElement).innerText = '';
+      }
+    });
+  }, 100);
   }
 
 }
